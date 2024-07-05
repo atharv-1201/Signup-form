@@ -5,6 +5,15 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     const email = document.getElementById('email').value;
     const age = document.getElementById('age').value;
     const pancard = document.getElementById('pancard').value;
+
+
+     // Create UserInput object
+     const userInput = {
+        name: name,
+        email: email,
+        age: age,
+        pancard: pancard
+    };
     
    
 

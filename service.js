@@ -16,7 +16,8 @@ connection.connect((err) => {
   console.log('Connected to the database');
 });
 
-exports.insertUser = (user, callback) => {
+exports.insertUser = (userInput, callback) => {
+  const { name, email, age, pancard } = userInput;
   const query = 'INSERT INTO users (name, email, age, pancard) VALUES (?, ?, ?, ?)';
-  connection.query(query, [user.name, user.email, user.age, user.pancard], callback);
+  connection.query(query, [name, email, age, pancard], callback);
 };
