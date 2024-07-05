@@ -6,10 +6,29 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
     const age = document.getElementById('age').value;
     const pancard = document.getElementById('pancard').value;
     
-    // Simple form validation
-    if (name && email && age && pancard) {
+   
+
+
+    fetch('/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ name, email, age, pancard })
+    })
+    .then(response => response.text())
+    .then(message => alert(message))
+    .catch(error => console.error('Error:', error));
+
+
+
+     // Simple form validation
+     if (name && email && age && pancard) {
         alert('Signup successful!');
     } else {
         alert('Please fill in all fields.');
     }
+
 });
+
+
