@@ -34,4 +34,4 @@ if (!module.parent) {
   });
 }
 
-
+// [HTML Form] -> [script.js] -> [POST /signup] -> [app.js] -> [routes.js] -> [confirm.js] -> [service.js] -> [MySQL Database]
