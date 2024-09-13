@@ -18,4 +18,4 @@ project-folder/
 ├── public/
 │   ├── index.html
 │   ├── styles.css
-│   └── script.js
+│   |── script.js
